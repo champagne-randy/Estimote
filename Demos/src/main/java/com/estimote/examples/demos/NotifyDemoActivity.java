@@ -28,6 +28,13 @@ import static com.estimote.sdk.BeaconManager.MonitoringListener;
  * </ul>
  *
  * @author wiktor@estimote.com (Wiktor Gworek)
+ * 
+ * 
+ * TODO: make http call to server
+ * 			http://developer.android.com/reference/java/net/HttpURLConnection.html
+ * 			http://stackoverflow.com/questions/3505930/make-an-http-request-with-android
+ * TODO: implement a service to handle http calls
+ * 						
  */
 public class NotifyDemoActivity extends Activity {
 
@@ -47,6 +54,11 @@ public class NotifyDemoActivity extends Activity {
     Beacon beacon = getIntent().getParcelableExtra(ListBeaconsActivity.EXTRAS_BEACON);
     region = new Region("regionId", beacon.getProximityUUID(), beacon.getMajor(), beacon.getMinor());
     notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+    
+    // begin norc section
+    // TODO: make call to register api
+    
+    // begin beacon section
     beaconManager = new BeaconManager(this);
 
     // Default values are 5s of scanning and 25s of waiting time to save CPU cycles.

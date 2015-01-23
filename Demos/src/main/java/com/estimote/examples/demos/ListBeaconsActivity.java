@@ -100,13 +100,13 @@ public class ListBeaconsActivity extends Activity {
   @Override
   protected void onStart() {
     super.onStart();
-
+    
     // Check if device supports Bluetooth Low Energy.
     if (!beaconManager.hasBluetooth()) {
       Toast.makeText(this, "Device does not have Bluetooth Low Energy", Toast.LENGTH_LONG).show();
       return;
     }
-
+	
     // If Bluetooth is not enabled, let user enable it.
     if (!beaconManager.isBluetoothEnabled()) {
       Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
