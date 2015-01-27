@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="login">Please enter your name and click register</string>
+    <string name="beacon_service_endpoint">http://1nlp1407-i:8080/beaconservice/app/register/</string>
+    <string name="firstNameLabel">Please enter your first name and click register</string>
     <string name="register">register</string>
 </resources>

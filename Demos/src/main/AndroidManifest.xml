@@ -11,6 +11,7 @@
   <!-- Needed permissions in order to scan for beacons. -->
   <uses-permission android:name="android.permission.BLUETOOTH"/>
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
 
   <!-- Declaration that this app is usable on phones with Bluetooth Low Energy. -->
   <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
@@ -28,6 +29,8 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    
+    <service android:name=".PlayerRegistrationService" />
 
     <activity
         android:name="com.estimote.examples.demos.ListBeaconsActivity"
